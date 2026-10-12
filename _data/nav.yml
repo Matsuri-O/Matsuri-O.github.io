@@ -13,7 +13,7 @@
       url: /research/presentations/
       data: presentations
     - label: MISC
-      ja: その他の業績
+      ja: その他
       url: /research/misc/
       data: misc
     - label: MATERIALS
