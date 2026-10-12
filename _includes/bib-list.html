@@ -1,0 +1,23 @@
+{% comment %}
+  APA書誌 + 概要 を年ごとにまとめて表示します。
+{% endcomment %}
+{% if include.items and include.items.size > 0 %}
+{% assign groups = include.items | group_by: "year" | sort: "name" | reverse %}
+{% for group in groups %}
+<section class="year-group">
+  <h2 class="year">{{ group.name }}</h2>
+  <ol class="bib">
+    {% for item in group.items %}
+    <li class="bib-item">
+      <div class="apa">{{ item.apa | markdownify }}</div>
+      {% if item.summary %}
+      <p class="summary"><span class="summary-label">概要</span>{{ item.summary }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">現在、掲載している項目はありません。</p>
+{% endif %}
