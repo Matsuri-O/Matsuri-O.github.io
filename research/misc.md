@@ -1,6 +1,6 @@
 ---
 layout: research
-title: その他の業績
+title: その他
 heading_en: MISC
 parent:
   label: RESEARCH
