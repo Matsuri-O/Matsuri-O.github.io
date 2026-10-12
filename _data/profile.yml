@@ -52,11 +52,11 @@ keywords:
 # ⑤ リンク（URL を書き換えてください）
 links:
   - label: researchmap
-    url: <https://researchmap.jp/matsuri-okamoto?lang=ja>
+    url: https://researchmap.jp/matsuri-okamoto?lang=ja
   - label: ORCID
-    url: <https://orcid.org/0009-0007-8589-0469>
+    url: https://orcid.org/0009-0007-8589-0469
   - label: Google Scholar
-    url: <https://scholar.google.com/citations?user=cJ17bPcAAAAJ>
+    url: https://scholar.google.com/citations?user=cJ17bPcAAAAJ
 
 # ⑥ 連絡先（迷惑メール対策のため、ユーザー名とドメインを分けて書きます）
 email:
