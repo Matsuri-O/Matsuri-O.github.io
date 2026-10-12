@@ -2,8 +2,6 @@
 layout: default
 ---
 {% assign research_nav = site.data.nav | where: "url", "/research/" | first %}
-
-{% unless page.show_children %}
 <nav class="subnav" aria-label="研究メニュー">
   <ul>
     <li><a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>OVERVIEW</a></li>
@@ -12,31 +10,27 @@ layout: default
     {% endfor %}
   </ul>
 </nav>
-{% endunless %}
+
+{% if page.show_children %}
+<ul class="cards">
+  {% for child in research_nav.children %}
+  {% assign child_items = site.data[child.data] %}
+  <li class="card">
+    <a href="{{ child.url | relative_url }}">
+      <span class="card-en">{{ child.label }}</span>
+      <span class="card-ja">{{ child.ja }}</span>
+      <span class="card-count">{{ child_items.size | default: 0 }} 件</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
 
 {% assign body = content | strip %}
 {% if body != "" %}
 <div class="prose">
 {{ content }}
 </div>
-{% endif %}
-
-{% if page.show_children %}
-<section class="research-index-links" aria-label="研究業績・資料">
-  <h2 class="sec-heading"><span class="ja">研究業績・資料</span></h2>
-  <ul class="cards">
-    {% for child in research_nav.children %}
-    {% assign child_items = site.data[child.data] %}
-    <li class="card">
-      <a href="{{ child.url | relative_url }}">
-        <span class="card-en">{{ child.label }}</span>
-        <span class="card-ja">{{ child.ja }}</span>
-        <span class="card-count">{{ child_items.size | default: 0 }} 件</span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
 {% endif %}
 
 {% if page.bib %}

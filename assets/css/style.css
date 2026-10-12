@@ -249,8 +249,6 @@ ul.plain li::marker { color: var(--main); }
 .tags li { border: 1px solid var(--sub); border-radius: 999px; padding: .05em .8em; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); }
 
 /* ---------- RESEARCH ---------- */
-.research-index-links { margin-top: 2.75rem; }
-.research-index-links .sec-heading { margin-bottom: 1rem; }
 .subnav { margin: -0.75rem 0 2rem; border-bottom: 1px solid var(--sub); }
 .subnav ul { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
 .subnav a {
