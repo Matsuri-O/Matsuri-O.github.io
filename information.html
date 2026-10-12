@@ -1,10 +1,17 @@
 ---
 layout: default
-title: 基本情報
-heading_en: INFORMATION
+title: プロフィール
+heading_en: PROFILE
 permalink: /information/
 ---
 {% assign p = site.data.profile %}
+
+<section class="info-sec">
+  {% include section-heading.html id="profile" en="PROFILE" ja="プロフィール" %}
+  <p class="profile-entry">{{ p.name_ja }}{% if p.name_en %} <span class="profile-name-en">{{ p.name_en }}</span>{% endif %}</p>
+  {% if p.position %}<p class="profile-entry">{{ p.position }}</p>{% endif %}
+  {% if p.intro %}<p class="profile-entry">{{ p.intro }}</p>{% endif %}
+</section>
 
 <section class="info-sec info-split">
   <div>

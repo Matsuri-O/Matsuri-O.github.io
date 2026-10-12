@@ -2,14 +2,9 @@
 layout: default
 ---
 {% assign profile = site.data.profile %}
-<section class="hero">
-  <p class="hero-position">{{ profile.affiliation[0].ja }}　{{ profile.position }}</p>
-  <h1 class="hero-name">
-    <span class="hero-name-ja">{{ profile.name_ja }}</span>
-    <span class="hero-name-en">{{ profile.name_en }}</span>
-  </h1>
-  {% if profile.intro %}<p class="hero-intro">{{ profile.intro }}</p>{% endif %}
-  <ul class="hero-links">
+<section class="home-landing" aria-labelledby="home-title">
+  <h1 class="home-title" id="home-title">魚拓用サイト</h1>
+  <ul class="home-links">
     {% for l in profile.links %}
     <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
     {% endfor %}
@@ -19,7 +14,7 @@ layout: default
 <ul class="cards cards-top">
   <li class="card">
     <a href="{{ '/information/' | relative_url }}">
-      <span class="card-en">INFORMATION</span>
+      <span class="card-en">PROFILE</span>
       <span class="card-ja">所属・経歴・連絡先</span>
     </a>
   </li>
