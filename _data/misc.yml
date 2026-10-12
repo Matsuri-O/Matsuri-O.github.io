@@ -1,7 +1,7 @@
 # ===== MISC（解説記事・書評・報告書など）=====
 # 書き方は papers.yml と同じです。※ 以下は記入例です。
 
-- year: 2023
+- year: 2025年3月
   apa: >-
-    山田 太郎 (2023). 心理尺度を正しく使うために　*〇〇ニュース*, *5*, 10–12.
-  summary: 既存の質問紙を研究で使うときに気をつけたい点を、一般向けに解説しました。
+    岡本 茉莉 (2025). 3rd Summer School of Personality Scienceに関する参加報告　パーソナリティ研究, *33*(3), 225-227.
+  summary: European Association of Personality Psychology (EAPP)によるサマースクールに国際学術交流奨励賞受賞者として参加した際の報告。
