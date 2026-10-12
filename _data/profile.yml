@@ -1,60 +1,62 @@
 # ===== プロフィール（INFORMATION / TOP で使用）=====
 # ※ すべて仮の内容です。ご自身の情報に置き換えてください。
 
-name_ja: 山田 太郎
-name_en: Taro YAMADA
-position: 講師
-intro: 〇〇心理学を専門に、心理尺度の開発と妥当性の検証に取り組んでいます。
+name_ja: 岡本　茉莉
+name_en: Matsuri OKAMOTO　※Pronouns she/her
+position: PhD student
+intro: 魚拓用
 
 # ① 所属・学位
 affiliation:
-  - ja: 〇〇大学 〇〇学部 〇〇学科
-    en: Department of XX, Faculty of XX, XX University
-    position: 講師
+  - ja: 早稲田大学　文学研究科　心理学コース
+    en: Waseda University, Graduate School of Letters, Arts and Sciences
+    position: 博士後期課程3年
 degree:
-  - name: 博士（心理学）
-    institution: 〇〇大学
-    year: 2020
-  - name: 修士（心理学）
-    institution: 〇〇大学
-    year: 2017
+  - name: ー
+    institution: ー
+    year: ー
+  - name: 修士（文学）
+    institution: 早稲田大学
+    year: 2024
 
 # ② 職歴（新しい順）
 history:
-  - period: 2023年4月 – 現在
-    text: 〇〇大学 〇〇学部 講師
-  - period: 2020年4月 – 2023年3月
-    text: 〇〇大学 〇〇研究科 特任助教
-  - period: 2018年4月 – 2020年3月
-    text: 日本学術振興会 特別研究員（DC2）
+  - period: xxx – xxx
+    text: 〇〇大学 〇〇学部 xx
+  - period: xxx – xxx
+    text: 〇〇大学 〇〇学部 xx
+  - period: xxx – xxx
+    text: 〇〇大学 〇〇学部 xx
 
 # ③ 学歴（新しい順）
 education:
-  - period: 2017年4月 – 2020年3月
-    text: 〇〇大学大学院 〇〇研究科 博士後期課程
-  - period: 2015年4月 – 2017年3月
-    text: 〇〇大学大学院 〇〇研究科 博士前期課程
-  - period: 2011年4月 – 2015年3月
-    text: 〇〇大学 〇〇学部
+  - period: 2024年4月 – 現在
+    text: 早稲田大学大学院 文学研究科 博士後期課程
+  - period: 2022年4月 – 2024年3月
+    text: 早稲田大学大学院 文学研究科 修士課程
+  - period: 2018年4月 – 2022年3月
+    text: 早稲田大学 文化構想学部　複合文化論系
+  - period: 2015年4月 – 2018年3月
+    text: お茶の水女子大学附属高等学校
 
 # ④ 研究分野・キーワード
 areas:
-  - 人文・社会 / 社会心理学
-  - 人文・社会 / 教育心理学
+  - 人文・社会 / 社会心理学 / パーソナリティ心理学
+  - 人文・社会 / 教育心理学 / パーソナリティ心理学
 keywords:
-  - 尺度開発
-  - 心理測定
-  - 項目反応理論
-  - 〇〇〇〇
+  - 個人差
+  - パーソナリティ
+  - パーソナリティ心理学
+  - 食行動
 
 # ⑤ リンク（URL を書き換えてください）
 links:
   - label: researchmap
-    url: https://researchmap.jp/
+    url: https://researchmap.jp/matsuri-okamoto?lang=ja
   - label: ORCID
-    url: https://orcid.org/
+    url: https://orcid.org/0009-0007-8589-0469
   - label: Google Scholar
-    url: https://scholar.google.com/
+    url: https://scholar.google.com/citations?user=cJ17bPcAAAAJ
 
 # ⑥ 連絡先（迷惑メール対策のため、ユーザー名とドメインを分けて書きます）
 email:
