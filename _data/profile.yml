@@ -12,15 +12,15 @@ affiliation:
     en: Waseda University, Graduate School of Letters, Arts and Sciences
     position: 博士後期課程3年
 degree:
-  - name: ー
-    institution: ー
-    year: ー
+  - name: "N/A"
+    institution: "N/A"
+    year: "N/A"
   - name: 修士（文学）
     institution: 早稲田大学
     year: 2024
 
 # ② 職歴（新しい順）
-history: N/A
+history: "N/A"
   #- period: xxx – xxx
   # text: 〇〇大学 〇〇学部 xx
   #- period: xxx – xxx
