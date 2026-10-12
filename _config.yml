@@ -6,7 +6,7 @@ lang: ja
 # 公開URL
 #  - リポジトリ名が「<ユーザー名>.github.io」の場合: baseurl は "" のまま
 #  - それ以外（例: リポジトリ名 "profile"）の場合: baseurl を "/profile" に
-url: "https://username.github.io"
+url: "https://matsuri-o.github.io"
 baseurl: ""
 
 # researchmap から最後に内容を写した日（フッターに表示されます）
