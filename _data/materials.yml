@@ -9,21 +9,21 @@
 # ※ 以下は記入例です（架空の文献・DOI）。
 
 - type: 尺度
-  title: 〇〇尺度（Example Scale; ES）
-  preview: /assets/img/materials/example-scale.png
-  description: 大学生の〇〇の程度を測る12項目・5件法の質問紙です。採点方法と項目の並び順は、質問票の2ページ目に従ってください。
+  title: 日本語版肯定的摂食尺度（The Japanese version of the Positive Eating Scale; PES-J）
+  preview: /assets/img/materials/pes-j.png
+  description: 自らの摂食についての評価傾向を測る8項目2因子・4件法の質問紙です。採点方法と項目の並び順は質問票の記載をご参照ください。
   source: >-
-    Yamada, T., & Suzuki, H. (2025). Development and validation of the
-    Example Scale for university students. *Japanese Journal of Example
-    Psychology*, *12*(3), 45–60. https://doi.org/10.0000/example.0001
+    Okamoto, M., Oshio, A., Renner, B., & Sproesser, G. (2026). The Japanese version of the Positive Eating Scale (PES-J)
+    ――Psychometric evaluation and relationship with health parameters.―― 
+    *Journal of Health Psychology.* Advance online publication. <https://doi.org/10.1177/13591053261437584>
   files:
-    - path: /assets/files/example-scale.pdf
+    - path: /assets/files/PESJ.pdf
       format: pdf
 
 - type: 授業資料
-  title: 心理統計入門 第3回「平均と散らばり」
-  preview: /assets/img/materials/stats-lecture-03.png
-  description: 平均値・標準偏差の考え方を、手計算の例題で確かめるための配布資料です。
+  title: -
+  preview: -
+  description: -
   source: 〇〇大学「心理統計法Ⅰ」2025年度前期
   files:
     - path: /assets/files/stats-lecture-03.pdf
