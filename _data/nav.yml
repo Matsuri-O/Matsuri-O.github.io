@@ -1,0 +1,24 @@
+# 左メニュー（トップページへは左上のTOPから移動します）
+- label: PROFILE
+  url: /information/
+- label: RESEARCH
+  url: /research/
+  children:
+    - label: PAPERS
+      ja: 査読論文
+      url: /research/papers/
+      data: papers
+    - label: PRESENTATIONS
+      ja: 学会発表
+      url: /research/presentations/
+      data: presentations
+    - label: MISC
+      ja: その他の業績
+      url: /research/misc/
+      data: misc
+    - label: MATERIALS
+      ja: 資料
+      url: /research/materials/
+      data: materials
+- label: OTHER
+  url: /other/

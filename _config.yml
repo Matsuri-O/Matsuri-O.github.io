@@ -1,0 +1,21 @@
+# ===== サイト全体の設定 =====
+title: "魚拓用サイト"
+description: "研究者情報（researchmap のミラーサイト）"
+lang: ja
+
+# 公開URL
+#  - リポジトリ名が「<ユーザー名>.github.io」の場合: baseurl は "" のまま
+#  - それ以外（例: リポジトリ名 "profile"）の場合: baseurl を "/profile" に
+url: "https://matsuri-o.github.io"
+baseurl: ""
+
+# researchmap から最後に内容を写した日（フッターに表示されます）
+last_synced: 2026-10-12
+
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md

@@ -1,0 +1,32 @@
+---
+layout: default
+title: その他
+heading_en: OTHER
+permalink: /other/
+---
+{% assign items = site.data.gallery %}
+<p class="lead">これまでに携わったものなど。</p>
+
+<ul class="gallery">
+  {% for g in items %}
+  <li>
+    <figure>
+      <button type="button" class="gallery-open" data-full="{{ g.image | relative_url }}" data-alt="{{ g.alt }}" data-caption="{{ g.caption }}" aria-label="{{ g.alt }} を拡大">
+        <img src="{{ g.image | relative_url }}" alt="{{ g.alt }}" loading="lazy">
+      </button>
+      <figcaption>
+        {{ g.caption }}
+        {% if g.link %}<a class="more" href="{{ g.link }}" rel="noopener">関連ページ</a>{% endif %}
+      </figcaption>
+    </figure>
+  </li>
+  {% endfor %}
+</ul>
+
+<dialog id="lightbox" class="lightbox" aria-label="拡大画像">
+  <figure>
+    <img src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button type="button" class="lightbox-close" aria-label="閉じる">×</button>
+</dialog>
