@@ -5,15 +5,32 @@
 # 並び順は、このファイルに書いた順（年の中で）になります。
 # ※ 以下は記入例です（架空の文献・DOI）。
 
+- year: 2026
+  apa: >-
+    Okamoto, M., Shimotsukasa, T., & Oshio, A. (2026). 
+    Associations between food choice values, personality traits, and demographic characteristics. 
+    *Personality and Individual Differences*, *263*, Article 114031. https://doi.org/10.1016/j.paid.2026.114031
+  summary: 日本の大規模パネルを対象に，食物選択において何を相対的に重視するかと性格特性（Big Five/Dark Triad）・デモグラフィック属性の関係を検討しました。
+  誠実性は健康・栄養の重視，外向性は味・気分の重視と関連し，Dark Triadの各側面も異なる関連を示しました。
+
+  apa: >-
+  　Okamoto, M., Oshio, A., Renner, B., & Sproesser, G. (2026).
+  　The Japanese version of the Positive Eating Scale (PES-J)――Psychometric evaluation and relationship with health parameters. 
+  　*Journal of Health Psychology*. *Advance online publication*. https://doi.org/10.1177/13591053261437584
+  summary: 「摂食への満足」と「摂食時の快楽」を測る肯定的摂食尺度 (PES; Positive Eating Scale; Sproesser et al., 2018) の日本語版を作成しました。
+  自らの摂食について肯定的に評価する傾向を捉える概念です。
+
+  apa: >-
+  　Okamoto, M., & Oshio, A. (2026). 
+  　Infrequent, monthly, weekly, or daily? Big Five traits of longitudinal drinking-frequency profiles. 
+  　*Alcohol and Alcoholism*, *61*(3), Article agag012. https://doi.org/10.1093/alcalc/agag012
+  summary: 日本の大規模縦断パネルを対象に，飲酒頻度の変化パターンをクラスに分け，性格特性（Big Five）との関連を検討しました。
+  外向性が高い人々ほど高頻度群に属しやすく，誠実性の高さは中頻度群への所属と負に関連する傾向が示されました。
+
 - year: 2025
   apa: >-
-    Yamada, T., & Suzuki, H. (2025). Development and validation of the
-    Example Scale for university students. *Japanese Journal of Example
-    Psychology*, *12*(3), 45–60. https://doi.org/10.0000/example.0001
-  summary: 大学生の〇〇を測る質問紙（12問）をつくり、本当にそれを測れているかを約800人のデータで確かめました。
-
-- year: 2024
-  apa: >-
-    山田 太郎・佐藤 次郎 (2024). 〇〇傾向が△△に及ぼす影響　*〇〇心理学研究*,
-    *95*(1), 1–12. https://doi.org/10.0000/example.0002
-  summary: 〇〇しやすい人ほど△△になりやすいのかを、半年間の追跡調査で調べました。関係はあるものの、その強さは小さいことがわかりました。
+    Okamoto, M., & Oshio, A. (2025).
+    Effort, eating and everyday life――Age differences in the value of food convenience.
+    *Cogent Psychology*, *12*(1), Article 2570101. https://doi.org/10.1080/23311908.2025.2570101
+  summary: 日本の大規模パネルを対象に，食事の便利さを重視する傾向と，精神的健康の関係が年齢で異なることを示しました。
+  年齢によって食の意味付けが異なる可能性について議論を行いました。
