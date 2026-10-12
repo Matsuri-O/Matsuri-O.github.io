@@ -13,9 +13,11 @@
   preview: /assets/img/materials/pes-j.png
   description: "自らの摂食についての評価傾向を測る8項目2因子・4件法の質問紙です。採点方法と項目の並び順は質問票の記載をご参照ください。"
   source: >-
-    "Okamoto, M., Oshio, A., Renner, B., & Sproesser, G. (2026). The Japanese version of the Positive Eating Scale (PES-J)"
-    "――Psychometric evaluation and relationship with health parameters.――"
-    "*Journal of Health Psychology.* Advance online publication. <https://doi.org/10.1177/13591053261437584>"
+    Okamoto, M., Oshio, A., Renner, B., & Sproesser, G. (2026).
+    The Japanese version of the Positive Eating Scale (PES-J):
+    Psychometric evaluation and relationship with health parameters.
+    *Journal of Health Psychology*. Advance online publication.
+    <https://doi.org/10.1177/13591053261437584>
   files:
     - path: /assets/files/PESJ.pdf
       format: pdf
