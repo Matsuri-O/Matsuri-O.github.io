@@ -6,14 +6,14 @@
 # ※ 以下は記入例です。
 
 - image: /assets/img/gallery/sample-1.svg
-  alt: 公開講座の会場の様子
-  caption: 公開講座「こころを測るということ」講師（2025年）
+  alt: パソ心第35回大会パンフレット表紙
+  caption: 日本パーソナリティ心理学会第35回大会表紙（2026年）
   link: https://example.com/
 
 - image: /assets/img/gallery/sample-2.svg
-  alt: 冊子の表紙
-  caption: 高校生向け冊子『心理学ってなに？』監修（2024年）
+  alt: -
+  caption: -
 
 - image: /assets/img/gallery/sample-3.svg
-  alt: ワークショップの集合写真
-  caption: 統計ワークショップ運営（2023年）
+  alt: -
+  caption: -
