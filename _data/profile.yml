@@ -4,7 +4,7 @@
 name_ja: 岡本　茉莉
 name_en: Matsuri OKAMOTO　※Pronouns she/her
 position: PhD student
-intro: 魚拓用
+intro: 広く日常生活における個人差および関連する心理学的特性について考えています。
 
 # ① 所属・学位
 affiliation:
@@ -20,13 +20,13 @@ degree:
     year: 2024
 
 # ② 職歴（新しい順）
-history:
-  - period: xxx – xxx
-    text: 〇〇大学 〇〇学部 xx
-  - period: xxx – xxx
-    text: 〇〇大学 〇〇学部 xx
-  - period: xxx – xxx
-    text: 〇〇大学 〇〇学部 xx
+history: N/A
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
 
 # ③ 学歴（新しい順）
 education:
@@ -52,13 +52,16 @@ keywords:
 # ⑤ リンク（URL を書き換えてください）
 links:
   - label: researchmap
-    url: https://researchmap.jp/matsuri-okamoto?lang=ja
+    url: <https://researchmap.jp/matsuri-okamoto?lang=ja>
   - label: ORCID
-    url: https://orcid.org/0009-0007-8589-0469
+    url: <https://orcid.org/0009-0007-8589-0469>
   - label: Google Scholar
-    url: https://scholar.google.com/citations?user=cJ17bPcAAAAJ
+    url: <https://scholar.google.com/citations?user=cJ17bPcAAAAJ>
 
 # ⑥ 連絡先（迷惑メール対策のため、ユーザー名とドメインを分けて書きます）
 email:
-  user: yamada
-  domain: example.ac.jp
+  user: matsuri0806
+  domain: gmail.com
+email (academic):
+  user: f1584026
+  domain: toki.waseda.jp
