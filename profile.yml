@@ -1,0 +1,67 @@
+# ===== プロフィール（PROFILE ページ / TOP の外部リンクで使用）=====
+# ※ すべて仮の内容です。ご自身の情報に置き換えてください。
+
+name_ja: 岡本　茉莉
+name_en: Matsuri OKAMOTO
+position: PhD student
+intro: 広く日常生活における個人差および性格特性について考えています。
+
+# ① 所属・学位
+affiliation:
+  - ja: 早稲田大学　文学研究科　心理学コース
+    en: Waseda University, Graduate School of Letters, Arts and Sciences
+    position: 博士後期課程3年
+degree:
+  - name: "N/A"
+    institution: "N/A"
+    year: "N/A"
+  - name: 修士（文学）
+    institution: 早稲田大学
+    year: 2024
+
+# ② 職歴（新しい順）
+history: "N/A"
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
+  #- period: xxx – xxx
+  # text: 〇〇大学 〇〇学部 xx
+
+# ③ 学歴（新しい順）
+education:
+  - period: 2024年4月 – 現在
+    text: 早稲田大学大学院 文学研究科 博士後期課程
+  - period: 2022年4月 – 2024年3月
+    text: 早稲田大学大学院 文学研究科 修士課程
+  - period: 2018年4月 – 2022年3月
+    text: 早稲田大学 文化構想学部　複合文化論系
+  - period: 2015年4月 – 2018年3月
+    text: お茶の水女子大学附属高等学校
+
+# ④ 研究分野・キーワード
+areas:
+  - 人文・社会 / 社会心理学 / パーソナリティ心理学
+  - 人文・社会 / 教育心理学 / パーソナリティ心理学
+keywords:
+  - 個人差
+  - パーソナリティ
+  - パーソナリティ心理学
+  - 食行動
+
+# ⑤ リンク（URL を書き換えてください）
+links:
+  - label: researchmap
+    url: https://researchmap.jp/matsuri-okamoto?lang=ja
+  - label: ORCID
+    url: https://orcid.org/0009-0007-8589-0469
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=cJ17bPcAAAAJ
+
+# ⑥ 連絡先（迷惑メール対策のため、ユーザー名とドメインを分けて書きます）
+email:
+  user: matsuri0806
+  domain: gmail.com
+email (academic):
+  user: f1584026
+  domain: toki.waseda.jp

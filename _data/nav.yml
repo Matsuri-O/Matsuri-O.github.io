@@ -1,5 +1,5 @@
-# 左メニュー（トップページへは左上の名前から移動します）
-- label: INFORMATION
+# 左メニュー（トップページへは左上のTOPから移動します）
+- label: PROFILE
   url: /information/
 - label: RESEARCH
   url: /research/

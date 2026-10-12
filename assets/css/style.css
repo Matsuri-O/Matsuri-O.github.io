@@ -24,6 +24,9 @@
   --tracking-wide: .3em;
   --sidebar: clamp(290px, 26vw, 420px);
   --radius: 4px;
+  /* 2pt ≒ 2.67px 縮小。小さい注記類は可読性のため 10px を下限にする。 */
+  --font-reduction: 2.6667px;
+  --font-min: 10px;
   --font: "Segoe UI", "Yu Gothic UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
           "Noto Sans JP", Meiryo, system-ui, sans-serif;
 }
@@ -35,8 +38,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: max(var(--font-min), calc(13px - var(--font-reduction)));
+  line-height: 2.85;
   letter-spacing: var(--tracking);
 }
 img { max-width: 100%; height: auto; display: block; }
@@ -78,7 +81,7 @@ a:focus-visible, button:focus-visible {
 }
 .site-name {
   color: var(--muted); text-decoration: none;
-  font-size: 1.1rem; font-weight: 600; letter-spacing: var(--tracking-wide); line-height: 1.3;
+  font-size: max(var(--font-min), calc(1rem - var(--font-reduction))); font-weight: 600; letter-spacing: var(--tracking-wide); line-height: 1.95;
 }
 .site-name:hover { color: var(--text); }
 
@@ -103,7 +106,7 @@ a:focus-visible, button:focus-visible {
   display: flex; align-items: baseline; gap: 1.1em;
   padding: .6em 0 .6em 2.3rem;
   color: var(--text); text-decoration: none;
-  font-size: .95rem; line-height: 1.4; letter-spacing: var(--tracking-wide);
+  font-size: max(var(--font-min), calc(.83rem - var(--font-reduction))); line-height: 2.1; letter-spacing: var(--tracking-wide);
 }
 .gnav a:hover { background: none; }
 .lv1 > a { font-weight: 700; }
@@ -155,7 +158,7 @@ a:focus-visible, button:focus-visible {
     padding: 4.5rem 1.25rem 2rem 3.5rem;
   }
   .header-bar { display: block; min-height: 0; padding: 0; }
-  .site-name { font-size: 1.45rem; }
+  .site-name { font-size: max(var(--font-min), calc(.95rem - var(--font-reduction))); }
   .menu-toggle { display: none; }
   .gnav { margin-top: 7.5rem; margin-left: -.1rem; }
   .content { display: flex; flex-direction: column; min-width: 0; }
@@ -166,44 +169,48 @@ a:focus-visible, button:focus-visible {
 /* 画面幅が中くらいのPC・タブレット横：メニューの字間と余白を少し詰める */
 @media (min-width: 960px) and (max-width: 1279.98px) {
   .site-header { padding: 3.5rem 1rem 2rem 2.25rem; }
-  .site-name { font-size: 1.25rem; letter-spacing: .22em; }
+  .site-name { font-size: max(var(--font-min), calc(.9rem - var(--font-reduction))); letter-spacing: .22em; }
   .gnav { margin-top: 5.5rem; }
-  .gnav a { font-size: .88rem; letter-spacing: .22em; }
+  .gnav a { font-size: max(var(--font-min), calc(.8rem - var(--font-reduction))); letter-spacing: .22em; }
 }
 @media (min-width: 1280px) {
   .page-body, .site-footer .wrap > * { margin-left: 4.5rem; }
 }
 
+/* 全ページ共通で原寸から約2pt文字を縮小し、行高を広げる。
+   下限を下回る小さなラベルだけ 10px を保持する。
+   RESEARCH の説明文（.prose）および研究業績（.apa/.summary）も対象。 */
 /* ---------- ページ見出し（日本語を大きく、英語を小さく青で） ---------- */
 main.wrap { padding-top: 2rem; padding-bottom: 5rem; min-height: 60vh; }
 @media (min-width: 960px) { main.wrap { padding-top: 4.5rem; } }
 .page-head { margin-bottom: 2.25rem; }
-.crumb { margin: 0 0 .9rem; font-size: .82rem; letter-spacing: var(--tracking-wide); color: var(--link); }
+.crumb { margin: 0 0 .9rem; font-size: max(var(--font-min), calc(.82rem - var(--font-reduction))); letter-spacing: var(--tracking-wide); color: var(--link); }
 .crumb a { text-decoration: none; }
-.page-head h1 { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .2em 1em; line-height: 1.25; }
-.page-head h1 .ja { font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 700; letter-spacing: .08em; }
-.page-head h1 .en { font-size: .85rem; font-weight: 400; letter-spacing: var(--tracking-wide); color: var(--link); }
+.page-head h1 { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .2em 1em; line-height: 1.875; }
+.page-head h1 .ja { font-size: max(var(--font-min), calc(clamp(1.8rem, 3vw, 2.75rem) - var(--font-reduction))); font-weight: 700; letter-spacing: .08em; }
+.page-head h1 .en { font-size: max(var(--font-min), calc(.78rem - var(--font-reduction))); font-weight: 400; letter-spacing: var(--tracking-wide); color: var(--link); }
 
 .sec-heading {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: .1em .8em;
   margin: 0 0 .75rem; padding-left: .7rem; border-left: 4px solid var(--main);
-  line-height: 1.4;
+  line-height: 2.1;
 }
-.sec-heading .en { font-size: .95rem; letter-spacing: var(--tracking-wide); }
-.sec-heading .ja { font-size: .8rem; font-weight: 400; color: var(--muted); }
-h3.minor { font-size: .85rem; margin: 1rem 0 .3rem; color: var(--muted); }
+.sec-heading .en { font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); letter-spacing: var(--tracking-wide); }
+.sec-heading .ja { font-size: max(var(--font-min), calc(.75rem - var(--font-reduction))); font-weight: 400; color: var(--muted); }
+h3.minor { font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); margin: 1rem 0 .3rem; color: var(--muted); }
 
-/* ---------- TOP ---------- */
-.hero { padding: 1rem 0 2.5rem; border-bottom: 1px solid var(--sub); margin-bottom: 2rem; }
-.hero-position { margin: 0; font-size: .85rem; color: var(--muted); }
-.hero-name { margin: .2rem 0 1rem; line-height: 1.2; }
-.hero-name-ja {
-  display: inline-block; font-size: clamp(2.2rem, 6vw, 3.2rem); letter-spacing: .1em;
-  background: linear-gradient(transparent 70%, var(--sub) 70%);
+/* ---------- TOP（中央の短い説明と外部リンクのみ） ---------- */
+.home-landing {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: clamp(190px, 35vh, 330px);
+  margin-bottom: 2rem; padding: 2rem 0;
+  text-align: center; border-bottom: 1px solid var(--sub);
 }
-.hero-name-en { display: block; font-size: .9rem; letter-spacing: var(--tracking-wide); margin-top: .5rem; font-weight: 400; color: var(--link); }
-.hero-intro { max-width: 40em; }
-.hero-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding: 0; list-style: none; margin: 1rem 0 0; }
+.home-title { margin: 0; font-size: max(var(--font-min), calc(.95rem - var(--font-reduction))); font-weight: 400; letter-spacing: .08em; }
+.home-links {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: .5rem 1.5rem; margin: 1rem 0 0; padding: 0; list-style: none;
+}
 
 /* ---------- カード（TOP・RESEARCH） ---------- */
 .cards {
@@ -217,31 +224,35 @@ h3.minor { font-size: .85rem; margin: 1rem 0 .3rem; color: var(--muted); }
   transition: transform .15s, box-shadow .15s, background-color .15s;
 }
 .card a:hover { background: var(--bg); transform: translateY(-2px); box-shadow: 0 4px 0 var(--accent); }
-.card-en { font-weight: 700; letter-spacing: var(--tracking-wide); font-size: .9rem; }
-.card-ja { font-size: .8rem; color: var(--muted); }
-.card-count { margin-top: .5rem; font-size: .75rem; align-self: flex-start; padding: 0 .6em; border-radius: 999px; background: var(--sub-tint); }
+.card-en { font-weight: 700; letter-spacing: var(--tracking-wide); font-size: max(var(--font-min), calc(.82rem - var(--font-reduction))); }
+.card-ja { font-size: max(var(--font-min), calc(.8rem - var(--font-reduction))); color: var(--muted); }
+.card-count { margin-top: .5rem; font-size: max(var(--font-min), calc(.75rem - var(--font-reduction))); align-self: flex-start; padding: 0 .6em; border-radius: 999px; background: var(--sub-tint); }
 
-/* ---------- INFORMATION ---------- */
+/* ---------- PROFILE（名前は他の情報と同じ本文サイズ） ---------- */
+.profile-entry { margin: .25rem 0; font-size: max(var(--font-min), calc(1rem - var(--font-reduction))); font-weight: 400; }
+.profile-name-en { color: var(--muted); }
+
+/* ---------- INFORMATION / PROFILE ---------- */
 .info-sec { padding: 1.5rem 0; border-top: 1px solid var(--sub); }
 .info-sec:first-of-type { border-top: 0; padding-top: 0; }
 .info-split { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 ul.plain { margin: 0; padding-left: 1.3em; }
 ul.plain li::marker { color: var(--main); }
-.sub-en { display: block; font-size: .8rem; color: var(--muted); line-height: 1.6; }
+.sub-en { display: block; font-size: max(var(--font-min), calc(.8rem - var(--font-reduction))); color: var(--muted); line-height: 2.4; }
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline li {
   display: grid; grid-template-columns: 14em 1fr; gap: 0 1rem;
   padding: .45rem 0; border-bottom: 1px dashed var(--sub);
 }
-.timeline .period { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.timeline .period { font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); color: var(--muted); font-variant-numeric: tabular-nums; }
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
-.tags li { border: 1px solid var(--sub); border-radius: 999px; padding: .05em .8em; font-size: .85rem; }
+.tags li { border: 1px solid var(--sub); border-radius: 999px; padding: .05em .8em; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); }
 
 /* ---------- RESEARCH ---------- */
 .subnav { margin: -0.75rem 0 2rem; border-bottom: 1px solid var(--sub); }
 .subnav ul { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
 .subnav a {
-  display: block; padding: .45em .8em; font-size: .72rem; font-weight: 700; letter-spacing: .15em;
+  display: block; padding: .45em .8em; font-size: max(var(--font-min), calc(.72rem - var(--font-reduction))); font-weight: 700; letter-spacing: .15em;
   color: var(--text); text-decoration: none; white-space: nowrap;
   border-radius: var(--radius) var(--radius) 0 0;
 }
@@ -249,8 +260,8 @@ ul.plain li::marker { color: var(--main); }
 
 .prose { max-width: 46em; }
 .prose h2 {
-  font-size: 1rem; margin: 0 0 .75rem; padding-left: .7rem;
-  border-left: 4px solid var(--main); line-height: 1.5;
+  font-size: max(var(--font-min), calc(.9rem - var(--font-reduction))); margin: 0 0 .75rem; padding-left: .7rem;
+  border-left: 4px solid var(--main); line-height: 2.25;
 }
 .prose ul { padding-left: 1.3em; }
 .prose li { margin: .35em 0; }
@@ -259,7 +270,7 @@ ul.plain li::marker { color: var(--main); }
 .year-group { margin-bottom: 2rem; }
 .year {
   display: inline-block; margin: 0 0 .5rem; padding: .05em .8em;
-  font-size: .9rem; letter-spacing: .12em; border-radius: var(--radius);
+  font-size: max(var(--font-min), calc(.83rem - var(--font-reduction))); letter-spacing: .12em; border-radius: var(--radius);
   background: var(--sub);
 }
 .bib { list-style: none; margin: 0; padding: 0; }
@@ -267,13 +278,13 @@ ul.plain li::marker { color: var(--main); }
 /* APA 第7版のぶら下げインデント */
 .apa p { margin: 0; padding-left: 2em; text-indent: -2em; overflow-wrap: anywhere; letter-spacing: .02em; }
 .summary {
-  margin: .6rem 0 0 2em; padding: .55em .9em; font-size: .9rem;
+  margin: .6rem 0 0 2em; padding: .55em .9em; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction)));
   background: var(--sub-tint); border-left: 3px solid var(--sub);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 .summary-label {
   display: inline-block; margin-right: .6em; padding: 0 .5em;
-  font-size: .72rem; font-weight: 700; background: var(--sub); border-radius: 3px;
+  font-size: max(var(--font-min), calc(.72rem - var(--font-reduction))); font-weight: 700; background: var(--sub); border-radius: 3px;
 }
 .empty { color: var(--muted); }
 
@@ -292,7 +303,7 @@ ul.plain li::marker { color: var(--main); }
 .mat-title {
   grid-area: title; margin: 0; padding: .55rem 1rem;
   border-bottom: 2px solid var(--line);
-  font-size: 1.3rem; font-weight: 700; letter-spacing: .12em; line-height: 1.5;
+  font-size: max(var(--font-min), calc(1.13rem - var(--font-reduction))); font-weight: 700; letter-spacing: .12em; line-height: 2.25;
 }
 .mat-type { margin-left: -.5em; }  /* 【 の左の余白を詰める */
 .mat-preview { grid-area: preview; padding: .4rem; border-right: 2px solid var(--line); }
@@ -305,15 +316,15 @@ ul.plain li::marker { color: var(--main); }
 }
 .mat-preview a:hover img, .mat-preview a:hover .mat-noimg { border-color: var(--accent); }
 .mat-noimg { display: grid; place-items: center; font-weight: 700; letter-spacing: .2em; color: var(--muted); }
-.mat-desc { grid-area: desc; padding: .7rem 1rem; font-size: .92rem; }
+.mat-desc { grid-area: desc; padding: .7rem 1rem; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); }
 .mat-dl {
   grid-area: dl; border-right: 2px solid var(--line);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .1rem;
-  padding: .4rem .3rem; font-size: .72rem; letter-spacing: .04em;
+  padding: .4rem .3rem; font-size: max(var(--font-min), calc(.72rem - var(--font-reduction))); letter-spacing: .04em;
 }
 .mat-dl a { color: var(--text); text-decoration: none; }
 .mat-dl a:hover { background: var(--accent); }
-.mat-src { grid-area: src; border-top: 2px solid var(--line); padding: .5rem 1rem; font-size: .85rem; letter-spacing: .03em; overflow-wrap: anywhere; }
+.mat-src { grid-area: src; border-top: 2px solid var(--line); padding: .5rem 1rem; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); letter-spacing: .03em; overflow-wrap: anywhere; }
 .mat-src p { margin: 0; }
 
 @media (max-width: 600px) {
@@ -325,7 +336,7 @@ ul.plain li::marker { color: var(--main); }
       "src     src"
       "dl      dl";
   }
-  .mat-title { font-size: 1.05rem; }
+  .mat-title { font-size: max(var(--font-min), calc(.95rem - var(--font-reduction))); }
   .mat-dl { border-right: 0; border-top: 2px solid var(--line); flex-direction: row; justify-content: flex-start; gap: 1rem; padding: .5rem 1rem; }
 }
 
@@ -344,8 +355,8 @@ ul.plain li::marker { color: var(--main); }
 .gallery-open:hover { box-shadow: 0 0 0 3px var(--accent); }
 .gallery-open img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .25s; }
 .gallery-open:hover img { transform: scale(1.04); }
-.gallery figcaption { margin-top: .6rem; font-size: .85rem; line-height: 1.7; }
-.gallery .more { display: inline-block; margin-top: .2rem; font-size: .8rem; }
+.gallery figcaption { margin-top: .6rem; font-size: max(var(--font-min), calc(.85rem - var(--font-reduction))); line-height: 2.55; }
+.gallery .more { display: inline-block; margin-top: .2rem; font-size: max(var(--font-min), calc(.8rem - var(--font-reduction))); }
 
 .lightbox {
   border: 0; padding: 0; max-width: min(92vw, 1000px); background: var(--bg);
@@ -357,19 +368,19 @@ ul.plain li::marker { color: var(--main); }
 .lightbox figcaption { padding: .8rem 1rem; border-top: 3px solid var(--main); }
 .lightbox-close {
   position: absolute; top: .5rem; right: .5rem; width: 2.4rem; height: 2.4rem;
-  border: 0; border-radius: 50%; font-size: 1.4rem; line-height: 1; cursor: pointer;
+  border: 0; border-radius: 50%; font-size: max(var(--font-min), calc(1.4rem - var(--font-reduction))); line-height: 1; cursor: pointer;
   background: var(--bg); color: var(--text); box-shadow: 0 0 0 1px var(--line);
 }
 .lightbox-close:hover { background: var(--accent); }
 
 /* ---------- フッター（全ページ共通：黒地に白字） ---------- */
-.site-footer { background: #000; color: #FFF; font-size: .78rem; }
+.site-footer { background: #000; color: #FFF; font-size: max(var(--font-min), calc(.78rem - var(--font-reduction))); }
 .site-footer .wrap { padding-top: 2.75rem; padding-bottom: 3rem; }
 .site-footer p { margin: .35rem 0; }
 .site-footer a { color: var(--link-on-dark); }
 .site-footer a:hover { color: var(--text); background: var(--accent); }
 .synced { font-weight: 700; }
-.copy { color: #BDBDBD; font-size: .7rem; margin-top: 1.4rem !important; }
+.copy { color: #BDBDBD; font-size: max(var(--font-min), calc(.7rem - var(--font-reduction))); margin-top: 1.4rem !important; }
 
 /* ---------- スマートフォン ---------- */
 @media (max-width: 600px) {

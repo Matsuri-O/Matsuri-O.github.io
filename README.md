@@ -25,7 +25,7 @@ HTML を触らず、`_data/` の YAML ファイルを書き換えるだけで内
 | 尺度使用上の注意 | `research/index.md` |
 | OTHER の画像ギャラリー | `_data/gallery.yml` ＋ 画像を `assets/img/gallery/` へ |
 | 最終更新日時（フッター） | `_config.yml` の `last_synced` |
-| 配色・字間・左メニューの幅 | `assets/css/style.css` 冒頭の `:root` |
+| 文字サイズ・行間・配色・字間・左メニューの幅 | `assets/css/style.css` 冒頭の `:root` |
 | 左メニューの項目 | `_data/nav.yml` |
 
 ### 業績の書き方（papers / presentations / misc 共通）
@@ -55,3 +55,10 @@ HTML を触らず、`_data/` の YAML ファイルを書き換えるだけで内
 - 掲載中のデータ・画像・PDF はすべて**仮のもの**です（架空の文献・DOI）
 - 公開リポジトリに置いたファイルは誰でも閲覧・取得できます
 - フォントの Segoe UI・游ゴシック UI は Windows に入っている書体です。Mac・iPhone・Android では入っていないため、ヒラギノ角ゴや Noto Sans JP で表示されます
+
+### 文字の大きさ・行間、メール表記
+
+- 全ページの文字は、従来より約 **2pt（2.67px）** 小さくなるよう `assets/css/style.css` で調整しています。可読性のため、細かな注記などは **10px** を下限とします。
+- 行間は、元の各要素の行高係数を 1.5 倍にし、文字を縮小した状態でも行の実寸が概ね **1.2〜1.5 倍** となるよう設定しています。
+- 調整する場合は、CSS 先頭の `--font-reduction`（文字の縮小量）および `--font-min`（最低文字サイズ）を変更してください。
+- 連絡先は「`ユーザー名 at ドメイン`」の文字列で表示します。メールソフトが起動する `mailto:` リンクは作成しません。

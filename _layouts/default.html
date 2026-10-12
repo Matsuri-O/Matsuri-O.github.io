@@ -15,7 +15,7 @@
 <div class="layout">
 <header class="site-header">
   <div class="header-bar">
-    <a class="site-name" href="{{ '/' | relative_url }}" title="{{ profile.name_ja }}（トップへ）">{{ profile.name_en | upcase }}</a>
+    <a class="site-name" href="{{ '/' | relative_url }}" title="トップへ">TOP</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
@@ -55,7 +55,6 @@
   <div class="wrap">
     <p>本サイトは <a href="{{ profile.links[0].url }}">researchmap</a> 掲載情報の控え（ミラー）です。主に researchmap が参照できない際の参照用として作成しております。</p>
     <p class="synced">最終更新日時：<time datetime="{{ site.last_synced | date: '%Y-%m-%d' }}">{{ site.last_synced | date: '%Y年%-m月%-d日' }}</time></p>
-    <p class="copy">&copy; {{ profile.name_en | upcase }}</p>
   </div>
 </footer>
 </div>

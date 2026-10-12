@@ -1,4 +1,4 @@
-# ===== プロフィール（INFORMATION / TOP で使用）=====
+# ===== プロフィール（PROFILE ページ / TOP の外部リンクで使用）=====
 # ※ すべて仮の内容です。ご自身の情報に置き換えてください。
 
 name_ja: 岡本　茉莉
@@ -62,3 +62,6 @@ links:
 email:
   user: matsuri0806
   domain: gmail.com
+email (academic):
+  user: f1584026
+  domain: toki.waseda.jp

@@ -1,0 +1,7 @@
+# ===== MISC（解説記事・書評・報告書など）=====
+# 書き方は papers.yml と同じです。※ 以下は記入例です。
+
+- year: 2025年
+  apa: >-
+    岡本 茉莉 (2025). 3rd Summer School of Personality Scienceに関する参加報告　パーソナリティ研究, *33*(3), 225-227.
+  summary: "European Association of Personality Psychology (EAPP)によるサマースクールに国際学術交流奨励賞受賞者として参加した際の報告。"

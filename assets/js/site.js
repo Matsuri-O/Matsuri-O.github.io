@@ -30,15 +30,6 @@
   });
 })();
 
-// メールアドレス：表示時にリンクへ組み立て（収集ボット対策）
-document.querySelectorAll('.email[data-u][data-d]').forEach(function (el) {
-  var addr = el.dataset.u + '@' + el.dataset.d;
-  var a = document.createElement('a');
-  a.href = 'mailto:' + addr;
-  a.textContent = addr;
-  el.replaceWith(a);
-});
-
 // ギャラリーの拡大表示
 (function () {
   var dlg = document.getElementById('lightbox');
