@@ -1,0 +1,34 @@
+{% comment %} 資料カード：タイトル / プレビュー＋説明 / ダウンロード＋出典 {% endcomment %}
+{% assign materials = site.data.materials %}
+{% if materials and materials.size > 0 %}
+<ul class="mat-list">
+  {% for m in materials %}
+  {% assign first_file = m.files | first %}
+  <li class="mat">
+    <h2 class="mat-title">{% if m.type %}<span class="mat-type">【{{ m.type }}】</span>{% endif %}{{ m.title }}</h2>
+
+    <div class="mat-preview">
+      {% if first_file %}<a href="{{ first_file.path | relative_url }}" target="_blank" rel="noopener" aria-label="{{ m.title }} を開く">{% endif %}
+      {% if m.preview %}
+        <img src="{{ m.preview | relative_url }}" alt="" loading="lazy">
+      {% else %}
+        <span class="mat-noimg">{{ first_file.format | default: 'FILE' | upcase }}</span>
+      {% endif %}
+      {% if first_file %}</a>{% endif %}
+    </div>
+
+    <div class="mat-desc">{{ m.description }}</div>
+
+    <div class="mat-dl">
+      {% for f in m.files %}
+      <a href="{{ f.path | relative_url }}" download>[{{ f.format | default: 'file' | downcase }} download]</a>
+      {% endfor %}
+    </div>
+
+    <div class="mat-src">{{ m.source | markdownify }}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">現在、公開している資料はありません。</p>
+{% endif %}

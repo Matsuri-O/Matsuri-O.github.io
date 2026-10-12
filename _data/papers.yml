@@ -1,0 +1,19 @@
+# ===== 査読論文 =====
+# year : 年ごとの見出しに使います（"in press" なども可）
+# apa  : APA 第7版の書誌情報。*アスタリスク* で囲んだ部分が斜体になります
+# summary : 平易な日本語の概要
+# 並び順は、このファイルに書いた順（年の中で）になります。
+# ※ 以下は記入例です（架空の文献・DOI）。
+
+- year: 2025
+  apa: >-
+    Yamada, T., & Suzuki, H. (2025). Development and validation of the
+    Example Scale for university students. *Japanese Journal of Example
+    Psychology*, *12*(3), 45–60. https://doi.org/10.0000/example.0001
+  summary: 大学生の〇〇を測る質問紙（12問）をつくり、本当にそれを測れているかを約800人のデータで確かめました。
+
+- year: 2024
+  apa: >-
+    山田 太郎・佐藤 次郎 (2024). 〇〇傾向が△△に及ぼす影響　*〇〇心理学研究*,
+    *95*(1), 1–12. https://doi.org/10.0000/example.0002
+  summary: 〇〇しやすい人ほど△△になりやすいのかを、半年間の追跡調査で調べました。関係はあるものの、その強さは小さいことがわかりました。
