@@ -12,9 +12,9 @@ affiliation:
     en: Waseda University, Graduate School of Letters, Arts and Sciences
     position: 博士後期課程3年
 degree:
-  - name: "N/A"
-    institution: "N/A"
-    year: "N/A"
+  #- name: "N/A"
+    #institution: "N/A"
+    #year: "N/A"
   - name: 修士（文学）
     institution: 早稲田大学
     year: 2024
@@ -44,10 +44,10 @@ areas:
   - 人文・社会 / 社会心理学 / パーソナリティ心理学
   - 人文・社会 / 教育心理学 / パーソナリティ心理学
 keywords:
-  - 個人差
-  - パーソナリティ
-  - パーソナリティ心理学
-  - 食行動
+  - 個人差 (individual differences)
+  - パーソナリティ (personality)
+  - パーソナリティ心理学 (personality psychology)
+  - 食行動 (eating behavior)
 
 # ⑤ リンク（URL を書き換えてください）
 links:
